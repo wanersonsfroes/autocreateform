@@ -1,0 +1,49 @@
+PanelGroupFields
+	Align		= alTop
+	Height		= 62
+	TabOrder	= X
+	
+
+PanelMainField
+	Align 		= alTop
+	BevelOuter 	= bvNone
+	BorderSpacing
+		Around	= 2
+	BorderWidth	= 2
+	Caption		= EmptyStr
+	Color		= clDefault
+	Height		= 50
+	Parent		= Self
+	TabOrder	= X
+	
+ShapeField
+	Align		= alClient
+	Pen
+		Color	= $00E3E3E3
+		Width	= 2
+	Parent		= PanelMainField
+	Shape		= stRoundRect
+		
+PanelField
+	Align		= alClient
+	BevelOuter	= bvNone
+	BorderSpacing
+		Around	= 6
+	Caption		= EmptyStr
+	Color		= clWhite	
+	Parent		= PanelMainField
+	TabOrder	= X
+	
+LabelFieldTitle
+	Align		= alTop
+	Caption		= Titulo
+	Color		= clWhite
+	
+Componente
+	Align		= alClient
+	BorderStyle	= bsNone
+	DataSource	= DataSource
+	FieldName	= FieldName
+	CharSet		= ecUpperCase
+	Color		= $00F0F0F0
+	TabOrder	= X

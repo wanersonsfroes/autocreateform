@@ -1,0 +1,258 @@
+object dm_principal: Tdm_principal
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 297
+  HorizontalOffset = 338
+  VerticalOffset = 150
+  Width = 436
+  PPI = 96
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    ClientCodepage = 'utf8'
+    Catalog = 'teste'
+    Properties.Strings = (
+      'AutoEncodeStrings='
+      'codepage=utf8'
+    )
+    Connected = True
+    HostName = '192.168.25.151'
+    Port = 0
+    Database = 'teste'
+    User = 'teste'
+    Password = 'teste'
+    Protocol = 'MariaDB-10'
+    left = 157
+    top = 27
+  end
+  object sqlCadastros: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'SELECT * FROM cadastros WHERE nome LIKE :nome ORDER BY nome'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'nome'
+        ParamType = ptUnknown
+      end>
+    left = 160
+    top = 89
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'nome'
+        ParamType = ptUnknown
+      end>
+    object sqlCadastroscadastroID: TLongintField
+      FieldKind = fkData
+      FieldName = 'cadastroID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object sqlCadastrosdata_cadastro: TDateField
+      Tag = 1
+      DisplayLabel = 'Data do Cadastro'
+      FieldKind = fkData
+      FieldName = 'data_cadastro'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sqlCadastrosfoto: TBlobField
+      FieldKind = fkData
+      FieldName = 'foto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object sqlCadastrosnome: TStringField
+      Tag = 1
+      DisplayLabel = 'Nome'
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object sqlCadastrosdtnascimento: TDateField
+      Tag = 2
+      DisplayLabel = 'Dt Nascimento'
+      FieldKind = fkData
+      FieldName = 'dtnascimento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sqlCadastrossexo: TStringField
+      Tag = 2
+      DisplayLabel = 'Sexo'
+      FieldKind = fkData
+      FieldName = 'sexo'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object sqlCadastroscpf: TStringField
+      Tag = 3
+      DisplayLabel = 'CPF'
+      FieldKind = fkData
+      FieldName = 'cpf'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 11
+    end
+    object sqlCadastrosdocumento_tipo: TStringField
+      Tag = 3
+      DisplayLabel = 'Doc Tipo'
+      FieldKind = fkData
+      FieldName = 'documento_tipo'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object sqlCadastrosdocumento: TStringField
+      Tag = 3
+      DisplayLabel = 'Nº Documento'
+      FieldKind = fkData
+      FieldName = 'documento'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 11
+    end
+    object sqlCadastroscep: TStringField
+      FieldKind = fkData
+      FieldName = 'cep'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object sqlCadastrosendereco: TStringField
+      FieldKind = fkData
+      FieldName = 'endereco'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object sqlCadastrosnumero: TLongintField
+      FieldKind = fkData
+      FieldName = 'numero'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sqlCadastroscomplemento: TStringField
+      FieldKind = fkData
+      FieldName = 'complemento'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object sqlCadastrosbairro: TStringField
+      FieldKind = fkData
+      FieldName = 'bairro'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object sqlCadastrosmunicipio: TStringField
+      FieldKind = fkData
+      FieldName = 'municipio'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object sqlCadastrosestado: TStringField
+      FieldKind = fkData
+      FieldName = 'estado'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object sqlCadastrostel_fixo: TStringField
+      FieldKind = fkData
+      FieldName = 'tel_fixo'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 9
+    end
+    object sqlCadastrosnum_celular: TStringField
+      FieldKind = fkData
+      FieldName = 'num_celular'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object sqlCadastrosemail: TStringField
+      FieldKind = fkData
+      FieldName = 'email'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object sqlCadastrossituacao: TSmallintField
+      FieldKind = fkData
+      FieldName = 'situacao'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+end

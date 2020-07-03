@@ -1,0 +1,86 @@
+object FrameConsultas: TFrameConsultas
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 776
+  Align = alClient
+  ClientHeight = 240
+  ClientWidth = 776
+  TabOrder = 0
+  DesignLeft = 34
+  DesignTop = 98
+  object Panel1: TPanel
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 776
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 56
+    ClientWidth = 776
+    TabOrder = 0
+    object edtLocalizar: TLabeledEdit
+      Left = 104
+      Height = 23
+      Top = 24
+      Width = 416
+      EditLabel.Height = 15
+      EditLabel.Width = 416
+      EditLabel.Caption = '&Localizar'
+      EditLabel.ParentColor = False
+      TabOrder = 0
+      OnKeyDown = edtLocalizarKeyDown
+    end
+    object Panel2: TPanel
+      Left = 0
+      Height = 56
+      Top = 0
+      Width = 104
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 56
+      ClientWidth = 104
+      TabOrder = 1
+      object btnEditar: TButton
+        Left = 16
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = '&Editar'
+        OnClick = btnEditarClick
+        TabOrder = 0
+      end
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 161
+    Top = 56
+    Width = 776
+    Align = alClient
+    AlternateColor = clGradientInactiveCaption
+    Color = clWindow
+    Columns = <>
+    DataSource = dtsDados
+    FixedCols = 0
+    Options = [dgTitles, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete, dgDisableInsert]
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 217
+    Width = 776
+    Panels = <    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object dtsDados: TDataSource
+    OnDataChange = dtsDadosDataChange
+    left = 301
+    top = 132
+  end
+end
